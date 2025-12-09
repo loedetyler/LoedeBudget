@@ -1,78 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    min-height: 100vh;
-    background: linear-gradient(135deg, #3cb371, #1f1f1f);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    min-height: 100px;
+    font-size: 16px;
+    display: flex;
+    background-color: black;
+    color: white;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Recommendation to get the right side user profile by ChatGPT */
+    align-items: center;
+    padding: 12px;
+    background-color: #B01C12;
+    color: #ffcfcf;
+    font-size: 25px;
+    line-height: 1;
+    position: relative;
+}
+
+nav ul li {
+    border-bottom: 1px solid black;
+    padding: 10px 20px;
+}
+
+nav ul li:last-child {
+    border-bottom: none;
+}
+
+h1, p {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-size: 40px;
+    text-decoration-line: underline;
+}
+
+main {
+    font-size: 35px;
+}
+
+td, th {
+    border: 1px solid darkgray;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #202120;
+}
+
+tr:hover {
+    background-color: #333634;
+}
+
+th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    background-color: #7a0101;
+}
+
+a {
+    text-decoration: none;
+    color:aliceblue;
+}
+
+a:hover {
+    opacity: .85;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.links, .user {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.quotes {
+    display: flex;
+    text-align: center;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.quote {
+    padding: 25px;
+    font-size: 20px;
+    align-items: center;
+}
+
+.passTable {
+    width: fit-content;
+    padding-top: 20px;
+    margin: 0px auto;
+}
+
+.collapsible {
+    background-color: #B01C12;
+    color:aliceblue;
+    cursor: pointer;
+    padding: 8px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 25px;
+}
+
+.active .collapsible:hover {
+    background-color: #b01c12;
+}
+
+.content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0 18px;
+    background-color: #B01C12;
+    list-style-type: none;
+    z-index: 10;
+    border-radius: 4%;
+    border: 2px solid darkslategray;
+}
+
+.user .content {
+    right: 0;
+    left: auto;
 }
 
 .forms {
-    background-color: #121212;
-    color: #ffffff;
-
-    width: 380px;
-    padding: 30px;
-
-    margin: 80px auto;
-
-    border-radius: 10px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
-
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.forms > div {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-.forms label {
-    font-size: 14px;
-    color: #cccccc;
-}
-
-.forms input {
+    font-size: 22px;
     padding: 10px;
-    font-size: 16px;
-
-    border-radius: 6px;
-    border: 1px solid #444;
-
-    background-color: #1f1f1f;
-    color: #ffffff;
 }
 
-.forms input:focus {
-    outline: none;
-    border-color: #3cb371;
+.form-username {
+    text-align: center;
 }
-.errorlist {
-    margin: 0;
-    padding-left: 20px;
-    color: #ff6b6b;
-    font-size: 13px;
+
+.form-password {
+    text-align: center;
 }
+
+.form-password2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.login-form-password {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
 .form-submit {
-    margin-top: 10px;
-    padding: 12px;
-
-    font-size: 16px;
-    font-weight: bold;
-
-    border: none;
-    border-radius: 6px;
-
-    background-color: #3cb371;
-    color: #000;
-
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+    display: block;
+    margin: 0 auto;
 }
 
-.form-submit:hover {
-    background-color: #2e8b57;
+#why {
+    text-align: center;
+    font-size: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
-.form-submit:active {
-    transform: scale(0.97);
+#newPass {
+    color:white;
+}
+
+#toggleNewPass {
+    font-size: 18px;
+    margin-top: 15px;
 }

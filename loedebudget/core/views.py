@@ -7,7 +7,7 @@ def expense_list(request):
     context = {
         "expenses": entries_for_user,
     }
-    return render(request, 'core/expense_list.html', context)
+    return render(request, 'expenses/expense_list.html', context)
 
 def add_expense(request):
     if request.method == 'POST':
