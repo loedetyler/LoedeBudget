@@ -1,3 +1,5 @@
+/* The ideas came from me but due to my lack of CSS knowledge I asked chatGPT for a lot of help on this. ChatGPT gave some code when I was stuck but mostly gave links to documentation or W3 schools */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,32 +10,35 @@ body {
     min-height: 100px;
     font-size: 16px;
     display: flex;
-    background-color: black;
-    color: white;
     flex-direction: column;
+    background-color: #f4f7f5;
+    color: #1e2d29;
 }
 
+/* Nav Bar */
 nav {
     display: flex;
     justify-content: space-between; /* Recommendation to get the right side user profile by ChatGPT */
     align-items: center;
-    padding: 12px;
-    background-color: #B01C12;
-    color: #ffcfcf;
-    font-size: 25px;
+    padding: 12px 20px;
+    background-color: #4fa685;
+    color: #f5fdf9;
+    font-size: 22px;
     line-height: 1;
     position: relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15); /*helped by chatGPT */
 }
 
 nav ul li {
-    border-bottom: 1px solid black;
-    padding: 10px 20px;
+    border-bottom: 1px solid rgba(255,255,255,.25);
+    padding: 10px 16px;
 }
 
 nav ul li:last-child {
     border-bottom: none;
 }
 
+/* Headings */
 h1, p {
     text-align: center;
 }
@@ -42,97 +47,93 @@ h3 {
     text-align: center;
     font-size: 40px;
     text-decoration-line: underline;
+    color: #1f5f4a;
 }
 
+/* Main Content */
 main {
-    font-size: 35px;
+    font-size: 20px;
+    max-width: 100px;
+    margin: 0 auto;
+    padding: 30px 20px;
 }
 
+/* Tables */
 td, th {
-    border: 1px solid darkgray;
-    padding: 8px;
+    border: 1px solid #cfd8d4;
+    padding: 10px;
 }
 
 tr:nth-child(even) {
-    background-color: #202120;
+    background-color: #eef4f1;
 }
 
 tr:hover {
-    background-color: #333634;
+    background-color: #dff0ea;
 }
 
 th {
-    padding-top: 10px;
-    padding-bottom: 10px;
     text-align: left;
-    background-color: #7a0101;
+    background-color: #1f5f4a;
+    color: #f5fdf9;
 }
 
+/* Links */
 a {
     text-decoration: none;
-    color:aliceblue;
+    color:#1f5f4a;
+    font-weight: 500;
 }
 
 a:hover {
     opacity: .85;
 }
 
+/* Lists */
 ul {
     list-style-type: none;
 }
 
+/* Nav Dropdowns */
 .links, .user {
     display: flex;
     align-items: center;
     position: relative;
 }
 
-.quotes {
-    display: flex;
-    text-align: center;
-    gap: 20px;
-    justify-content: space-around;
-}
-
-.quote {
-    padding: 25px;
-    font-size: 20px;
-    align-items: center;
-}
-
-.passTable {
-    width: fit-content;
-    padding-top: 20px;
-    margin: 0px auto;
-}
-
 .collapsible {
-    background-color: #B01C12;
-    color:aliceblue;
+    background-color: #4fa685;
+    color:#f5fdf9;
     cursor: pointer;
-    padding: 8px;
-    width: 100%;
+    padding: 8px 10px;
     border: none;
-    text-align: center;
-    outline: none;
+    border-radius: 999px;
     font-size: 25px;
 }
 
 .active .collapsible:hover {
-    background-color: #b01c12;
+    background-color: #3e8f72;
 }
 
 .content {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 110%;
     left: 0;
     padding: 0 18px;
-    background-color: #B01C12;
-    list-style-type: none;
+    background-color: #ffffff;
+    color: #1e2d29;
     z-index: 10;
-    border-radius: 4%;
-    border: 2px solid darkslategray;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.2);
+}
+
+.content li {
+    padding: 10px 14px;
+}
+
+.content a {
+    color: #1e2d29;
 }
 
 .user .content {
@@ -140,46 +141,95 @@ ul {
     left: auto;
 }
 
-.forms {
-    font-size: 22px;
-    padding: 10px;
-}
-
-.form-username {
+/* Quotes */
+.quotes {
+    display: flex;
     text-align: center;
+    gap: 20px;
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
-.form-password {
-    text-align: center;
+.quote {
+    background-color: #ffffff;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.08);
 }
 
-.form-password2 {
-    text-align: center;
-    margin-bottom: 15px;
+/* Table Wrapper */
+.expenseTable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
-.login-form-password {
-    text-align: center;
-    margin-bottom: 15px;
+/* New Expense */
+#newExpense {
+    margin-top: 20px;
 }
 
-.form-submit {
+#newExpense label {
     display: block;
-    margin: 0 auto;
+    text-align: left;
 }
 
+#newExpense input {
+    width: 100%;
+    max-width: 260px;
+}
+
+#toggleNewExpense {
+    font-size: 18px;
+    margin-top: 15px;
+    margin: 0;
+}
+
+/* Forms */
+.forms {
+    font-size: 18px;
+    padding: 25px;
+    max-width: 380px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.12);
+}
+
+.forms label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.forms input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 14px;
+    border-radius: 8px;
+    border: 1px solid #cfd8d4;
+    font-size: 16px;
+}
+
+/* Button */
+.form-submit,
+.forms button {
+    display: block;
+    margin: 10px auto 0;
+    padding: 10px 18px;
+    background-color: #4fa685;
+    color: #f5fdf9;
+    border: none;
+    border-radius: 999px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Why */
 #why {
     text-align: center;
     font-size: 20px;
-    margin-left: 15%;
-    margin-right: 15%;
-}
-
-#newPass {
-    color:white;
-}
-
-#toggleNewPass {
-    font-size: 18px;
-    margin-top: 15px;
+    margin: 30px auto;
+    max-width: 700px;
 }
