@@ -1,0 +1,35 @@
+<!--ask user for email, first name, last name, password-->
+{% extends 'layout.html' %}
+
+{% block title %}
+    Register
+{% endblock %}
+{% block auth_title %}
+    Register a new user
+{% endblock %}
+{% block unauth_title %}
+    Register a new user
+{% endblock %}
+{% block content %}
+    <form class="forms" action="/users/register/" method="post">
+        {% csrf_token %}
+        <!--Had help with ChatGPT to split the registration form into smaller
+        more customizable chunks (12/4/2025)-->
+        <div class="form-username"> 
+            {{ form.username.label }}
+            {{ form.username }}
+            {{ form.username.errors }}
+        </div>
+        <div class="form-password">
+            {{ form.password1.label }}
+            {{ form.password1 }}
+            {{ form.password1.errors }}
+        </div>
+        <div class="form-password2">
+            {{ form.password2.label }}
+            {{ form.password2 }}
+            {{ form.password2.errors }}
+        </div>
+        <button class="form-submit">Submit</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,78 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #3cb371, #1f1f1f);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.forms {
+    background-color: #121212;
+    color: #ffffff;
+
+    width: 380px;
+    padding: 30px;
+
+    margin: 80px auto;
+
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.forms > div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.forms label {
+    font-size: 14px;
+    color: #cccccc;
+}
+
+.forms input {
+    padding: 10px;
+    font-size: 16px;
+
+    border-radius: 6px;
+    border: 1px solid #444;
+
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
+
+.forms input:focus {
+    outline: none;
+    border-color: #3cb371;
+}
+.errorlist {
+    margin: 0;
+    padding-left: 20px;
+    color: #ff6b6b;
+    font-size: 13px;
+}
+.form-submit {
+    margin-top: 10px;
+    padding: 12px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #3cb371;
+    color: #000;
+
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.form-submit:hover {
+    background-color: #2e8b57;
+}
+
+.form-submit:active {
+    transform: scale(0.97);
+}
