@@ -29,6 +29,8 @@ Enter the [tmux](https://github.com/tmux/tmux/wiki) terminal.<br><br>
 Create a superuser and fill out the requested information.<br><br>
 `python3 manage.py runserver --insecure 0.0.0.0:8000`<br>
 Run the server with the insecure flag to maintain the CSS.<br><br>
+`CTRL + B, D`
+To escape the tmux terminal.<br><br>
 
 # Disclaimer
 While all the logic came from me, I did occasionally get assistance from ChatGPT, W3Schools, and YouTube for some help understanding and implementing concepts.<br>
